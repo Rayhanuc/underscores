@@ -120,6 +120,8 @@ add_action( 'widgets_init', 'magnesium_widgets_init' );
  * Enqueue scripts and styles.
  */
 function magnesium_scripts() {
+	// wp_enqueue_style( $handle, $src = '', $deps = array, $ver = false, $media = 'all' )
+	wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/assets/css/bootstrap-4.3.1.min.css','4.3.1', true);
 	wp_enqueue_style( 'magnesium-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'magnesium-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
